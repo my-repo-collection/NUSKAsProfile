@@ -1,0 +1,99 @@
+<style>
+.PROFILErehab { /* Layout by: www.PROFILErehab.com; */ }
+
+img { border: none; padding: 0 !important; background-color: transparent !important; }
+
+/* Ocultar imágenes específicas */
+img[src="/images/t2/sec-header-arrow-bk.gif"] { display: none; }
+
+/* Ocultar el encabezado y elementos no deseados */
+#ctl00_oMasterHeaderDiv, .MPHeaderNavCell, #ctl00_oMasterAdDiv, .MPToolsBar { display: none !important; }
+
+/* Ocultar elementos de estado */
+span.statusDateTime, span.blacktext12 a { visibility: hidden; }
+
+body {
+    background: linear-gradient(to bottom, #0a0a0a, #111111) !important;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    color: #ffd700;
+}
+
+/* Todos los textos principales en dorado */
+table, tr, td, li, p, div, .text,
+.blacktext12, .nametext, .btext, .orangetext15, .whitetext12, .redtext, .redbtext,
+.blacktext10, .lightbluetext8 {
+    background-color: transparent !important;
+    color: #ffd700 !important;
+    font-family: 'Courier New', Courier, monospace !important;
+    font-weight: normal;
+}
+
+td.text table table table tr td a {
+    background-color: transparent !important;
+    border-bottom: none !important;
+    color: #ffd700 !important;
+}
+
+td.text table table table tr td a:hover {
+    color: #ffffff !important;
+    text-shadow: 0 0 8px rgba(255,215,0,0.7);
+}
+
+/* Enlaces generales */
+a {
+    color: #ffd700 !important;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+a:hover {
+    color: #ffffff !important;
+    text-shadow: 0 0 10px rgba(255,215,0,0.6);
+}
+
+/* Contact Table - adaptada al tema */
+.contactTable {
+    width: 300px !important;
+    height: 150px !important;
+    padding: 0 !important;
+    background: rgba(0,0,0,0.4) !important;
+    border: 1px solid #ffd70040;
+    border-radius: 6px;
+    backdrop-filter: blur(3px);
+}
+
+.contactTable table,
+table.contactTable td {
+    background: transparent !important;
+    border: none;
+}
+
+.contactTable a img { visibility: hidden; }
+
+.contactTable a {
+    display: block;
+    height: 31px;
+    width: 115px;
+    background: transparent !important;
+}
+
+/* Líneas horizontales con tema dorado */
+hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #ffd70080, transparent);
+    margin: 12px auto;
+}
+
+/* Intentamos mejorar un poco la apariencia de las secciones */
+table#MSCodesFixer > tbody > tr > td > table > tbody:first-of-type > tr > td > div:first-of-type,
+div.section-header {
+    background: rgba(20,20,20,0.65) !important;
+    border: 1px solid #ffd70030;
+    border-radius: 6px;
+    box-shadow: 0 0 15px rgba(255,215,0,0.12);
+    backdrop-filter: blur(2px);
+}
+</style>

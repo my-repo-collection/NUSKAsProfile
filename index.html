@@ -1,149 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NUSKA Styled Hamburger Menu</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: transparent;
-            color: #ffd700; /* Gold text for mysterious, sensual vibe */
-            font-family: 'Courier New', monospace; /* 90s retro font feel */
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NUSKA Hamburger Menu</title>
 
-        /* Hamburger Menu Icon */
-        .hamburger {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            cursor: pointer;
-            z-index: 1001;
-        }
+<style>
+html, body {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    font-family: 'Courier New', monospace;
+    color: #ffd700;
+}
 
-        .hamburger div {
-            width: 35px;
-            height: 5px;
-            background-color: #ffd700; /* Gold lines */
-            margin: 6px 0;
-            transition: 0.4s;
-        }
+/* HAMBURGER ICON */
+.hamburger {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 1001;
+}
+.hamburger div {
+    width: 35px;
+    height: 5px;
+    background-color: #ffd700;
+    margin: 6px 0;
+    transition: 0.4s;
+}
 
-        /* Menu Sidebar */
-        .menu {
-            height: 100%;
-            width: 0;
-            position: fixed;
-            z-index: 1000;
-            top: 0;
-            left: 0;
-            background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black for gothic-punk */
-            overflow-x: hidden;
-            transition: 0.5s;
-            padding-top: 60px;
-            box-shadow: 0 0 20px rgba(255, 215, 0, 0.2); /* Subtle gold glow for sensual edge */
-        }
+/* MENU PANEL */
+.menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(0,0,0,0);
+    overflow-x: hidden;
+    transition: width 0.5s, background-color 0.5s;
+    padding-top: 60px;
+}
 
-        .menu a {
-            padding: 8px 8px 8px 32px;
-            text-decoration: none;
-            font-size: 25px;
-            color: #ffd700;
-            display: block;
-            transition: 0.3s;
-            border-bottom: 1px solid #333; /* Dark divider for rebellious feel */
-        }
+.menu.open {
+    width: 260px;
+    background-color: rgba(0,0,0,0.9);
+    box-shadow: 0 0 25px rgba(255,215,0,0.25);
+}
 
-        .menu a:hover {
-            color: #fff; /* White on hover for provocative highlight */
-        }
+/* CLOSE BUTTON */
+.menu .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 36px;
+    text-decoration: none;
+    color: #ffd700;
+}
 
-        .menu .closebtn {
-            position: absolute;
-            top: 0;
-            right: 25px;
-            font-size: 36px;
-            margin-left: 50px;
-        }
+/* MENU ITEM */
+.menu a.menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 0;
+    text-decoration: none;
+    border-bottom: 1px solid #333;
+}
 
-        /* 90s Style Button Images */
-        .menu img {
-            width: 155px;
-            height: 55px;
-            margin-bottom: 10px; /* Space between buttons */
-            border: 2px solid #ffd700; /* Gold border for empowering frame */
-            box-shadow: 0 0 10px rgba(255, 215, 0, 0.5); /* Glowing for mysterious vibe */
-        }
+/* IMAGE */
+.menu a.menu-item img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    margin-bottom: 8px;
+    border: 2px solid #ffd700;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255,215,0,0.5);
+}
 
-        /* YouTube Embed for Music */
-        .menu iframe {
-            width: 155px;
-            height: 155px;
-            margin-bottom: 10px;
-            border: 2px solid #ffd700;
-            box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
-        }
-    </style>
+/* TEXT */
+.menu a.menu-item span {
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffd700;
+    opacity: 0.85;
+}
+
+/* HOVER */
+.menu a.menu-item:hover span {
+    color: #ffffff;
+    opacity: 1;
+}
+</style>
 </head>
+
 <body>
 
-<!-- Hamburger Icon -->
+<!-- HAMBURGER -->
 <div class="hamburger" onclick="toggleMenu()">
     <div></div>
     <div></div>
     <div></div>
 </div>
 
-<!-- Menu Content -->
+<!-- MENU -->
 <div id="nuskaMenu" class="menu">
-    <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">&times;</a>
-    
-    <!-- HOME -->
-    <a href="/net/home.aspx">
-        <img src="https://nusk-as-profile.vercel.app/7e075939-3d5a-4304-984d-689c20b9af93.jpg" title="Home">
-    </a>
-    
-    <!-- SEARCH -->
-    <a href="/net/search/search.aspx">
-        <img src="https://nusk-as-profile.vercel.app/7e075939-3d5a-4304-984d-689c20b9af93.jpg">
-    </a>
-    
-    <!-- FAQ -->
-    <a href="http://supportclassic.redlightcenter.com/support/solutions/folders/19000022819">
-        <img src="https://nusk-as-profile.vercel.app/7e075939-3d5a-4304-984d-689c20b9af93.jpg">
-    </a>
-    
-    <!-- CLOTHING -->
-    <a href="/Clothing" target="Clothing">
-        <img src="https://nusk-as-profile.vercel.app/7e075939-3d5a-4304-984d-689c20b9af93.jpg">
-    </a>
-    
-    <!-- FORUM -->
-    <a href="https://forums.utherverse.com/">
-        <img src="https://nusk-as-profile.vercel.app/7e075939-3d5a-4304-984d-689c20b9af93.jpg">
-    </a>
-    
-    <!-- SUPPORT -->
-    <a href="http://supportclassic.redlightcenter.com/support/home">
-        <img src="https://nusk-as-profile.vercel.app/7e075939-3d5a-4304-984d-689c20b9af93.jpg">
-    </a>
-    
-    <!-- MUSIC (Uncommented the iframe) -->
-    <!-- <a href="">
-        <iframe width="155" height="155" src="https://www.youtube.com/embed/qFQh0TY5A5M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </a> -->
+
+<a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">&times;</a>
+
+<a href="/net/home.aspx" class="menu-item">
+    <img src="https://nusk-as-profile.vercel.app/7e075939-3d5a-4304-984d-689c20b9af93.jpg" alt="Home">
+    <span>Home</span>
+</a>
+
+<a href="/net/search/search.aspx" class="menu-item">
+    <img src="https://nusk-as-profile.vercel.app/7e075939-3d5a-4304-984d-689c20b9af93.jpg" alt="Search">
+    <span>Search</span>
+</a>
+
+<a href="http://supportclassic.redlightcenter.com/support/solutions/folders/19000022819" class="menu-item">
+    <img src="https://nusk-as-profile.vercel.app/7e075939-3d5a-4304-984d-689c20b9af93.jpg" alt="FAQ">
+    <span>FAQ</span>
+</a>
+
+<a href="/Clothing" target="Clothing" class="menu-item">
+    <img src="https://nusk-as-profile.vercel.app/7e075939-3d5a-4304-984d-689c20b9af93.jpg" alt="Clothing">
+    <span>Clothing</span>
+</a>
+
+<a href="https://forums.utherverse.com/" class="menu-item">
+    <img src="https://nusk-as-profile.vercel.app/7e075939-3d5a-4304-984d-689c20b9af93.jpg" alt="Forum">
+    <span>Forum</span>
+</a>
+
+<a href="http://supportclassic.redlightcenter.com/support/home" class="menu-item">
+    <img src="https://nusk-as-profile.vercel.app/7e075939-3d5a-4304-984d-689c20b9af93.jpg" alt="Support">
+    <span>Support</span>
+</a>
+
 </div>
 
 <script>
-    function toggleMenu() {
-        var menu = document.getElementById("nuskaMenu");
-        if (menu.style.width === "250px") {
-            menu.style.width = "0";
-        } else {
-            menu.style.width = "250px";
-        }
-    }
+function toggleMenu() {
+    const menu = document.getElementById("nuskaMenu");
+    menu.classList.toggle("open");
+}
 </script>
 
 </body>

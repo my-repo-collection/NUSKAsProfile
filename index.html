@@ -27,7 +27,18 @@ html, body {
     height: 5px;
     background-color: #ffd700;
     margin: 6px 0;
-    transition: 0.4s;
+}
+
+/* CLOSE ICON (X) */
+.closebtn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 36px;
+    cursor: pointer;
+    color: #ffd700;
+    z-index: 1001;
+    display: none;
 }
 
 /* MENU PANEL */
@@ -41,23 +52,13 @@ html, body {
     background-color: rgba(0,0,0,0);
     overflow-x: hidden;
     transition: width 0.5s, background-color 0.5s;
-    padding-top: 60px;
+    padding-top: 80px;
 }
 
 .menu.open {
     width: 260px;
     background-color: rgba(0,0,0,0.9);
     box-shadow: 0 0 25px rgba(255,215,0,0.25);
-}
-
-/* CLOSE BUTTON */
-.menu .closebtn {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 36px;
-    text-decoration: none;
-    color: #ffd700;
 }
 
 /* MENU ITEM */
@@ -73,8 +74,8 @@ html, body {
 
 /* IMAGE */
 .menu a.menu-item img {
-    width: 110px;
-    height: 110px;
+    width: 62px;
+    height: 62px;
     object-fit: cover;
     margin-bottom: 8px;
     border: 2px solid #ffd700;
@@ -102,16 +103,17 @@ html, body {
 <body>
 
 <!-- HAMBURGER -->
-<div class="hamburger" onclick="toggleMenu()">
+<div class="hamburger" id="hamburger" onclick="toggleMenu()">
     <div></div>
     <div></div>
     <div></div>
 </div>
 
+<!-- CLOSE -->
+<div class="closebtn" id="closeBtn" onclick="toggleMenu()">✕</div>
+
 <!-- MENU -->
 <div id="nuskaMenu" class="menu">
-
-<a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">&times;</a>
 
 <a href="/net/home.aspx" class="menu-item">
     <img src="https://nusk-as-profile.vercel.app/7e075939-3d5a-4304-984d-689c20b9af93.jpg" alt="Home">
@@ -148,7 +150,18 @@ html, body {
 <script>
 function toggleMenu() {
     const menu = document.getElementById("nuskaMenu");
+    const hamburger = document.getElementById("hamburger");
+    const closeBtn = document.getElementById("closeBtn");
+
     menu.classList.toggle("open");
+
+    if (menu.classList.contains("open")) {
+        hamburger.style.display = "none";
+        closeBtn.style.display = "block";
+    } else {
+        hamburger.style.display = "block";
+        closeBtn.style.display = "none";
+    }
 }
 </script>
 

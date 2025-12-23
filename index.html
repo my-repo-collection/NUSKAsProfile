@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUSKA Styled Hamburger Menu</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000; /* Deep black background for NUSKA aesthetic */
+            color: #ffd700; /* Gold text for mysterious, sensual vibe */
+            font-family: 'Courier New', monospace; /* 90s retro font feel */
+        }
+
+        /* Hamburger Menu Icon */
+        .hamburger {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .hamburger div {
+            width: 35px;
+            height: 5px;
+            background-color: #ffd700; /* Gold lines */
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+
+        /* Menu Sidebar */
+        .menu {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black for gothic-punk */
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.2); /* Subtle gold glow for sensual edge */
+        }
+
+        .menu a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #ffd700;
+            display: block;
+            transition: 0.3s;
+            border-bottom: 1px solid #333; /* Dark divider for rebellious feel */
+        }
+
+        .menu a:hover {
+            color: #fff; /* White on hover for provocative highlight */
+        }
+
+        .menu .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        /* 90s Style Button Images */
+        .menu img {
+            width: 155px;
+            height: 55px;
+            margin-bottom: 10px; /* Space between buttons */
+            border: 2px solid #ffd700; /* Gold border for empowering frame */
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.5); /* Glowing for mysterious vibe */
+        }
+
+        /* YouTube Embed for Music */
+        .menu iframe {
+            width: 155px;
+            height: 155px;
+            margin-bottom: 10px;
+            border: 2px solid #ffd700;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+
+<!-- Hamburger Icon -->
+<div class="hamburger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+
+<!-- Menu Content -->
+<div id="nuskaMenu" class="menu">
+    <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">&times;</a>
+    
+    <!-- HOME -->
+    <a href="/net/home.aspx">
+        <img src="https://www.utherverse.com/bucket/8b2fcd9c-55e0-48a7-8c08-c8dd05263fb0" title="Home">
+    </a>
+    
+    <!-- SEARCH -->
+    <a href="/net/search/search.aspx">
+        <img src="https://www.utherverse.com/bucket/b9488927-c3e1-4ba2-b8b6-0de05786653c">
+    </a>
+    
+    <!-- FAQ -->
+    <a href="http://supportclassic.redlightcenter.com/support/solutions/folders/19000022819">
+        <img src="https://www.utherverse.com/bucket/62694f09-7269-4972-a8c8-77dd7e6518d0">
+    </a>
+    
+    <!-- CLOTHING -->
+    <a href="/Clothing" target="Clothing">
+        <img src="https://www.utherverse.com/bucket/92852ebf-1ce8-42b7-9c29-5bd5f9d3725f">
+    </a>
+    
+    <!-- FORUM -->
+    <a href="https://forums.utherverse.com/">
+        <img src="https://www.utherverse.com/bucket/33a95667-ca69-41a7-9661-ebfb50d0c6cb">
+    </a>
+    
+    <!-- SUPPORT -->
+    <a href="http://supportclassic.redlightcenter.com/support/home">
+        <img src="https://www.utherverse.com/bucket/caa114ce-70c1-41b7-b7f2-a0c03fdd9866">
+    </a>
+    
+    <!-- MUSIC (Uncommented the iframe) -->
+    <!-- <a href="">
+        <iframe width="155" height="155" src="https://www.youtube.com/embed/qFQh0TY5A5M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </a> -->
+</div>
+
+<script>
+    function toggleMenu() {
+        var menu = document.getElementById("nuskaMenu");
+        if (menu.style.width === "250px") {
+            menu.style.width = "0";
+        } else {
+            menu.style.width = "250px";
+        }
+    }
+</script>
+
+</body>
+</html>

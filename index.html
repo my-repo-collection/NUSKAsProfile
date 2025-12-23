@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NUSKA Hamburger Menu</title>
-
 <style>
 html, body {
     margin: 0;
@@ -14,7 +13,6 @@ html, body {
     color: #ffd700;
 }
 
-/* HAMBURGER ICON */
 .hamburger {
     position: fixed;
     top: 20px;
@@ -29,7 +27,6 @@ html, body {
     margin: 6px 0;
 }
 
-/* CLOSE ICON (X) */
 .closebtn {
     position: fixed;
     top: 20px;
@@ -41,7 +38,6 @@ html, body {
     display: none;
 }
 
-/* MENU PANEL */
 .menu {
     height: 100%;
     width: 0;
@@ -54,14 +50,12 @@ html, body {
     transition: width 0.5s, background-color 0.5s;
     padding-top: 80px;
 }
-
 .menu.open {
     width: 260px;
     background-color: rgba(0,0,0,0.9);
     box-shadow: 0 0 25px rgba(255,215,0,0.25);
 }
 
-/* MENU ITEM */
 .menu a.menu-item {
     display: flex;
     flex-direction: column;
@@ -70,9 +64,9 @@ html, body {
     padding: 18px 0;
     text-decoration: none;
     border-bottom: 1px solid #333;
+    color: inherit;
 }
 
-/* IMAGE */
 .menu a.menu-item img {
     width: 62px;
     height: 62px;
@@ -83,7 +77,6 @@ html, body {
     box-shadow: 0 0 10px rgba(255,215,0,0.5);
 }
 
-/* TEXT */
 .menu a.menu-item span {
     font-size: 14px;
     letter-spacing: 2px;
@@ -92,58 +85,53 @@ html, body {
     opacity: 0.85;
 }
 
-/* HOVER */
 .menu a.menu-item:hover span {
     color: #ffffff;
     opacity: 1;
 }
 </style>
 </head>
-
 <body>
 
-<!-- HAMBURGER -->
 <div class="hamburger" id="hamburger" onclick="toggleMenu()">
     <div></div>
     <div></div>
     <div></div>
 </div>
 
-<!-- CLOSE -->
 <div class="closebtn" id="closeBtn" onclick="toggleMenu()">✕</div>
 
-<!-- MENU -->
 <div id="nuskaMenu" class="menu">
 
-<a href="/net/home.aspx" class="menu-item">
-    <img src="https://nusk-as-profile.vercel.app/7e075939-3d5a-4304-984d-689c20b9af93.jpg" alt="Home">
-    <span>Home</span>
-</a>
+    <a href="https://redlightcenter.com/net/home.aspx" class="menu-item" target="_top">
+        <img src="https://nusk-as-profile.vercel.app/7e075939-3d5a-4304-984d-689c20b9af93.jpg" alt="Home">
+        <span>Home</span>
+    </a>
 
-<a href="/net/search/search.aspx" class="menu-item">
-    <img src="https://nusk-as-profile.vercel.app/7e075939-3d5a-4304-984d-689c20b9af93.jpg" alt="Search">
-    <span>Search</span>
-</a>
+    <a href="https://redlightcenter.com/net/search/search.aspx" class="menu-item" target="_top">
+        <img src="https://nusk-as-profile.vercel.app/7e075939-3d5a-4304-984d-689c20b9af93.jpg" alt="Search">
+        <span>Search</span>
+    </a>
 
-<a href="http://supportclassic.redlightcenter.com/support/solutions/folders/19000022819" class="menu-item">
-    <img src="https://nusk-as-profile.vercel.app/7e075939-3d5a-4304-984d-689c20b9af93.jpg" alt="FAQ">
-    <span>FAQ</span>
-</a>
+    <a href="http://supportclassic.redlightcenter.com/support/solutions/folders/19000022819" class="menu-item" target="_blank">
+        <img src="https://nusk-as-profile.vercel.app/7e075939-3d5a-4304-984d-689c20b9af93.jpg" alt="FAQ">
+        <span>FAQ</span>
+    </a>
 
-<a href="/Clothing" target="Clothing" class="menu-item">
-    <img src="https://nusk-as-profile.vercel.app/7e075939-3d5a-4304-984d-689c20b9af93.jpg" alt="Clothing">
-    <span>Clothing</span>
-</a>
+    <a href="https://redlightcenter.com/Clothing" class="menu-item" target="_top">
+        <img src="https://nusk-as-profile.vercel.app/7e075939-3d5a-4304-984d-689c20b9af93.jpg" alt="Clothing">
+        <span>Clothing</span>
+    </a>
 
-<a href="https://forums.utherverse.com/" class="menu-item">
-    <img src="https://nusk-as-profile.vercel.app/7e075939-3d5a-4304-984d-689c20b9af93.jpg" alt="Forum">
-    <span>Forum</span>
-</a>
+    <a href="https://forums.utherverse.com/" class="menu-item" target="_blank">
+        <img src="https://nusk-as-profile.vercel.app/7e075939-3d5a-4304-984d-689c20b9af93.jpg" alt="Forum">
+        <span>Forum</span>
+    </a>
 
-<a href="http://supportclassic.redlightcenter.com/support/home" class="menu-item">
-    <img src="https://nusk-as-profile.vercel.app/7e075939-3d5a-4304-984d-689c20b9af93.jpg" alt="Support">
-    <span>Support</span>
-</a>
+    <a href="http://supportclassic.redlightcenter.com/support/home" class="menu-item" target="_blank">
+        <img src="https://nusk-as-profile.vercel.app/7e075939-3d5a-4304-984d-689c20b9af93.jpg" alt="Support">
+        <span>Support</span>
+    </a>
 
 </div>
 
@@ -164,6 +152,5 @@ function toggleMenu() {
     }
 }
 </script>
-
 </body>
 </html>
